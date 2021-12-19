@@ -1,0 +1,65 @@
+﻿Vou mostrar um método mais fácil, pra poder entender, e depois se for o caso, agente vê um mais complexo.
+
+Na primeira página você deve selecionar a chave primária da tabela usuário, para na segunda selecionar os dados do banco de dados.
+
+usuario.php
+<?php include('config.php'); ?>
+<h1>Altera Cadastro</h1>
+<form id="form1" name="form1" method="post" action="usuario_form.php">
+<p>
+<label for="id_usuario">Selecione o usuário:</label>
+<?php
+$resultado=mysql_query("SELECT id_usuario, user_nome FROM nivel_acesso ORDER BY user_nome"); //Substitua o id_usuario pela chave primária da sua tabela
+?>
+<select name="id_usuario" id="id_usuario">
+<?php
+while ($linha=mysql_fetch_array($resultado)){
+?> 
+<option value="<?php echo $linha['id_usuario']; ?>"><?php echo $linha['user_nome']; ?></option>
+<?php
+}
+?> 
+</select>
+</p>
+<p>
+<input type="submit" name="button" id="button" value="Enviar" />
+</p>
+</form>
+
+
+usuario_form.php
+<?php
+include('config.php');
+$id_usuario = $_POST['id_usuario'];
+$resultado=mysql_query("SELECT user_email, user_nivel, user_senha FROM nivel_acesso WHERE id_usuario='$id_usuario'"); // Substitua id_usuario pela chave primária do seu banco de dados
+$linha=mysql_fetch_array($resultado);
+?>
+<form id="form1" name="form1" method="post" action="usuario_funcao.php">
+<table width="296" height="169" border="0">
+<tr>
+<th width="101" scope="row">E-mail</th>
+<td width="185"><input name="nome" type="text" value="<?php echo $linha['user_email']; ?>" /></td>
+</tr>
+<tr>
+<th scope="row">Porta</th>
+<td><input name="nome" type="text" value="<?php echo $linha['user_nivel']; ?>" /></td>
+</tr>
+<tr>
+<th scope="row">Senha </th>
+<td><input name="nome" type="text" value="<?php echo $linha['user_senha']; ?>" /></td>
+</tr>
+<tr>
+<th scope="row"> </th>
+<td><input type="submit" name="button" id="button" value="Alterar" /></td>
+</tr>
+<tr>
+<th scope="row"> </th>
+<td><p><img src="../imagens/voltar.png" width="48" height="48" /></p>
+<p>voltar</p></td>
+</tr>
+</table>
+</form>
+
+Agora é só criar um usuario_funcao.php e atualizar a sua tabela nivel_acesso, coletando as novas informações e utilizar o comando UPDATE do SQL.
+
+O exemplo acima é meramente didático, se você realmente implementar, aconselho a utilizar diversas ferramentas como a função trim(), campos de senha protegida, encriptação de senha, validação de campos e etc...

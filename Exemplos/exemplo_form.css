@@ -1,0 +1,174 @@
+@charset "UTF-8";
+/*
+Theme Name: Forever Heavy
+Theme URI: http://www.foreverheavy.com.com/
+Description: Y'all mothafuckas crazy
+Version: 2.0
+*/
+
+
+/* Resetting the CSS */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td 
+{ margin: 0; padding: 0; border: 0; outline: 0; font-weight: inherit; font-style: inherit; font-size: 100%; font-family: inherit; vertical-align: baseline; }
+
+/* remember to define focus styles! */
+:focus { outline: 0; }
+body { line-height: 1; color: black; background: white; }
+ol, ul { list-style: none; }
+
+/* tables still need 'cellspacing="0"' in the markup */
+table { border-collapse: separate; border-spacing: 0; }
+caption, th, td { text-align: left; font-weight: normal; }
+blockquote:before, blockquote:after, q:before, q:after { content: ""; }
+blockquote, q { quotes: "" ""; }
+/* Ah, thats better. */
+
+html, body { height:100%; }
+body { font-size:13px; line-height:20px; font-family: "Book Antiqua", Georgia, serif; color:#4a3d2e; background-image: url(images/blue-bg.jpg); background-position:center top; text-shadow:1px 1px #fcfcfa;}
+#page {position:absolute; background-image: url(images/bg.jpg); background-position:center top; width:100%;z-index:2; min-width:960px;}
+h2 { font-size:22px; }
+body#errorpage {background-image:url(images/bg.jpg)!important;}
+b {font-weight: bold;}
+i {font-style: italic;}
+.linethrough {text-decoration: line-through; text-shadow: none;}
+#commentform { overflow:hidden; width:500px; margin-bottom:20px;  border:1px dashed #cbc8be; padding:20px; }
+textarea#comment, #commentform input.text {-moz-border-radius: 4px; border-radius: 4px; border:1px dashed #cbc8be; width:479px; padding:10px; margin-bottom:10px; background-image: url(images/dark-bg.jpg); background-position:center; font-size:13px; font-family: "Book Antiqua", Georgia, serif; color:#4a3d2e; }
+textarea#comment { height:120px; -moz-border-radius: 4px; border-radius: 4px; }
+#comments h4 { font-size:18px; font-style: italic; color:#577a77; margin-bottom:3px; }
+.comment-date { font-size:12px;}
+.division li a, #tunes a { color: #4a3d2e; }
+.readmore { width:100%; }
+
+
+/* you dont even know dude */
+#oliver { float:right; }
+#error { margin:100px auto; width:940px; padding:20px; background-image: url(images/blue-bg.jpg); -moz-border-radius: 8px; border-radius: 8px; border:1px solid #cbc8be; }
+#aboutme .block-header { width:100%; padding-bottom:5px; margin-bottom:15px;}
+
+
+/* menu style */
+#outer #menu { width:320px; height:50px; margin:0 auto; margin-top:-188px; z-index:15; }
+#inner #menu { float:right; margin:5px auto 0 auto; height:35px; margin-top:25px; }
+#inner #menu li, #outer #menu li { display:inline; float:left; }
+#inner #menu a { background-image: url(images/inner-menu.png); height:35px; float:left; }
+#outer #menu a { background-image: url(images/menu.png); height:50px; float:left; }
+#inner #menu a#home { width:45px; background-position: 0 0; }
+#inner #menu a#work { background-position: -45px 0; width:54px; }
+#inner #menu a#about { background-position: -99px 0; width:53px; }
+#inner #menu a#blog { background-position: -152px 0; width:49px; }
+#inner #menu a#contact { background-position: -201px 0; width:65px; }
+#inner #menu a#home:hover { width:45px; background-position: 0 -35px; }
+#inner #menu a#work:hover { background-position: -45px -35px; width:54px; }
+#inner #menu a#about:hover { background-position: -99px -35px; width:53px; }
+#inner #menu a#blog:hover { background-position: -152px -35px; width:49px; }
+#inner #menu a#contact:hover { background-position: -201px -35px; width:65px; }
+#outer #menu ul { width:320px; position:absolute; z-index:15; }
+#outer #menu li.split { margin-left:100px; }
+#outer #menu a#work { background-position: 0 0; width:50px; }
+#outer #menu a#about { background-position: -50px 0; width:55px; }
+#outer #menu a#blog { background-position: -205px 0; width:50px; }
+#outer #menu a#contact { background-position: -255px 0; width:65px; }
+#outer #menu a#work:hover { background-position: 0 -50px; width:50px; }
+#outer #menu a#about:hover { background-position: -50px -50px; width:55px; }
+#outer #menu a#blog:hover { background-position: -205px -50px; width:50px; }
+#outer #menu a#contact:hover { background-position: -255px -50px; width:65px; }
+/* menu style */
+
+/* content structure */
+#outer #content { width:100%; margin-top:-45px; }
+#inner #content { width:100%; margin-top:-50px; }
+.container { width:940px; margin:0 auto; overflow:hidden; }
+.block { width:280px; text-align: center; float:left; margin-right:50px; }
+.block.right { float:right; margin:0; }
+.block-header { width:100%; padding-bottom:10px; background-image:url(images/title-bg.jpg); background-repeat: repeat-x; background-position: bottom; }
+.block-header h3 { display:none; }
+.thin { width:280px; float:right; }
+.wide { width:610px; float:left; }
+.wide h2, .thin h2 { font-size:20px; line-height:24px; margin-bottom:20px; border-bottom:1px dashed #729e9b; padding-bottom:10px; }
+#aboutme h2 { border:none; padding-bottom:0px; line-height:26px; }
+.thin li { margin-bottom:20px; }
+.thin h3 { font-size:15px; color:#577a77; }
+.division { background-image: url(images/dark-bg.jpg); background-position: top center; padding:30px 0px; margin:30px 0px 0px 0px; text-shadow: 1px 1px #f7f7f2; }
+.division h3 { color:#577a77; font-size:16px; margin-bottom:10px; border-bottom:1px dashed #B1AD9E; padding-bottom:10px; }
+.division .block { text-align: left; }
+.division-cap { background-image: url(images/dark-bg-border-bottom.jpg); background-position: top center; height:3px; width:100%; margin-bottom:40px; }
+.division-block { width:205px; height:205px; background-image: url(images/process-bg.png); padding:15px; float:left; text-align: center; }
+.division#aboutinfo li { background-image:url(images/check.png); background-position:left center; height:24px; line-height:24px; background-repeat:no-repeat; border-bottom: none; padding:0 0px 0 22px; margin:0; }
+.division#aboutinfo li:last-child { border:none; }
+#aboutme .thin li { padding-left:25px; background-image:url(images/award-icon.png); background-position:left top; line-height:18px; background-repeat:no-repeat; }
+/* content structure */
+
+/* blog style */
+#blog { width:940px; float:left; }
+.article { border-bottom:1px dashed #B1AD9E; overflow:hidden; margin-bottom:20px; width:940px; }
+.article#single { padding:0px 0px 30px 0px!important;}
+.blogborder { border-bottom:1px dashed #B1AD9E; margin:20px 0px; }
+.article .column-1 { width:110px; float:left; }
+.article .column-2 { width:800px; float:right; }
+.article-date { width:160px; float:left; text-align: right; }
+.article h3, h3#respond, #comments label { font-size:14px; font-style: italic; color:#577a77; margin-bottom:3px; }
+.article h3 a { color: #577A77; }
+.column-1 h4 { font-size:13px; font-style: italic; margin-bottom:3px; }
+.column-1 h5 { font-size:12px; font-style: italic; }
+.article-body { width:940px; float:right; }
+.article h2 { font-size:22px; line-height:24px; }
+.article h2 a { color:#4a3d2e; }
+.article h2 a:hover { text-decoration: none; color:#577a77; }
+.division p { margin:10px 0px; }
+.next { float:right; font-style:italic; }
+.prev { float:left; font-style:italic; }
+.next a, .prev a { color:#577a77; }
+/* blog style --
+
+/* contact page */
+#contact-form .row { width:100%; margin-bottom:20px; overflow:hidden; }
+#contact-form .textfield { width:290px; float:left; }
+#contact-form .textarea { width:610px; float:left; margin-bottom:20px; }
+#contact-form .textfield.right { float:right; }
+#contact-form .textfield input.text {-moz-border-radius: 4px; border-radius: 4px; width:272px; padding:8px; background-image:url(images/dark-bg.jpg); background-position: center; border:1px dashed #cbc8be; font-size:16px; font-family: "Book Antiqua", Georgia, serif; color:#4a3d2e; }
+#contact-form textarea {-moz-border-radius: 4px; border-radius: 4px; width:592px; padding:8px; background-image:url(images/dark-bg.jpg); background-position: center; border:1px dashed #cbc8be; font-size:16px; font-family: "Book Antiqua", Georgia, serif; color:#4a3d2e; height:100px; }
+#contact-form textarea:focus, #contact-form input.text:focus { border:1px dashed #b1ad9e; }
+#contact-form label { color:#577a77; font-style: italic; margin-bottom:5px; width:100%; display:block; }
+input.submit {-moz-border-radius: 4px; border-radius: 4px; float:right; border:1px dashed #729e9b; padding:8px; background-image:url(images/blue-bg.jpg); background-position: center; font-family: "Book Antiqua", Georgia, serif; color:#577a77; text-shadow: 1px 1px #ffffff; font-size:12px; width:100px; font-style: italic; }
+input.submit:focus { padding:9px 8px 7px 8px; }
+.required { color:#c87e21; }
+#contact-form .block-header, #contact-details .block-header {
+	margin-bottom:20px;
+}
+#contact-details li { height:50px; background-repeat:no-repeat; background-position:right top; border-bottom: 1px dashed #CBC8BE;padding-bottom:10px; margin-bottom:10px; }
+li.tweet-icon { background-image:url(images/reachout-twitter.png); }
+li.skype-icon { background-image:url(images/reachout-skype.png); }
+li.mail-icon { background-image:url(images/reachout-mail.png); }
+/* contact page */
+
+/* question form */
+#question-form { width:610px; float:left; }
+#question-form .question { width:400px; float:left; margin-right:30px; }
+#question-form .email { float:left; width:180px; }
+#question-form .question input.text { width:400px; padding:8px 0px; background-image:url(images/dark-bg.jpg); background-position: center; border:none; border-bottom:1px dashed #b1ad9e; font-size:15px; font-family: "Book Antiqua", Georgia, serif; color:#4a3d2e; }
+#question-form .email input.text { width:180px; padding:8px 0px; background-image:url(images/dark-bg.jpg); background-position: center; border:none; border-bottom:1px dashed #b1ad9e; font-size:15px; font-family: "Book Antiqua", Georgia, serif; color:#4a3d2e;  }
+#social-icons { width:280px; float:right; }
+/* question form */
+
+#thecssawards{
+position:absolute;
+top:65px;
+right:0px;
+z-index:555;
+}
+#thecssawards a{
+width:69px;
+height:105px;
+text-indent:-8000px;
+display:block;
+background:url(images/award_day_white.png) no-repeat;
+}
+
+.blog-image {
+	background-image:url(images/dark.jpg);
+	padding:5px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	border:1px solid #d3d1c6;
+}
+	

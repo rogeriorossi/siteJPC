@@ -1,0 +1,64 @@
+/* Main Navigation Colors */
+.main-nav-bar {
+	background-color: #2594f7;
+	}
+
+.main-nav-bar, .main-nav > .menu-item > a {
+	color: #ffffff;
+	}
+
+.main-nav .menu-item:hover > .menu-link,
+.main-nav > .current-menu-ancestor > a,
+.main-nav > .current-menu-item > a {
+	background-color: #1f4a82;
+	color: #ffffff;
+	height:100px;
+	}
+
+.main-menu-item {
+	display:inline;
+	min-height:100px
+	}
+
+.main-menu-item a {
+	height:100%;
+	text-decoration:none;
+	}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.container:before,
+.container:after {
+  content: " ";
+  display: table;
+  height:100px;
+}
+.container:after {
+  clear: both;
+}
+
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+/*
+.row:before,
+.row:after {
+  content: " ";
+  display: table;
+}
+.row:after {
+  clear: both;
+}
+*/
+.col-sm-12 {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}

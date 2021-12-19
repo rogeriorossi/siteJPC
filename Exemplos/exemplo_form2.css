@@ -1,0 +1,20 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.commentlist li { margin-bottom:20px; border:1px dashed #cbc8be; background-image:url(images/comment-bg.png); background-position:left top; padding:20px; -moz-border-radius: 4px; border-radius: 4px; }
+.comment-childs { width:88%; margin-top:20px; -moz-border-radius: 4px; border-radius: 4px; border:1px dashed #cbc8be; background-position:left top; padding:20px 3% 20px 3%; margin-left:5%; background-image:url(images/comment-bg.png);  }
+
+
+.comment-childs .row { width:400px!important; }
+.comment-childs .textarea { width:400px!important; }
+.comment-childs textarea { width:384px!important;  }
+.comment-childs .textfield { width:182px!important; }
+.comment-childs input.text { width:164px!important;  }
+.comment-childs #commentform {overflow:hidden; margin-top:40px;}
+
+#cancel_reply {
+	float:right;
+	text-align:right;
+	color:#4D9346;
+	padding:8px;
+}
